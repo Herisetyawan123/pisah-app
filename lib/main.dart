@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pisah_app/component/pages/get_started.dart';
+import 'package:pisah_app/screens/get_started.dart';
 
 void main() {
   runApp(MyApp());

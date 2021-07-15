@@ -1,39 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pisah_app/component/pages/auth/register_page.dart';
-import 'package:pisah_app/component/pages/get_started.dart';
+import 'package:pisah_app/component/input_text.dart';
+import 'package:pisah_app/component/title_auth.dart';
+import 'package:pisah_app/screens/auth/register_page.dart';
+import 'package:pisah_app/screens/get_started.dart';
 import 'package:pisah_app/theme/theme.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget InputText({label, hinttext, iconInput, bool password = false}) {
-      return Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              label,
-              style: TextStyle(
-                color: Colors.black.withOpacity(0.87),
-                fontSize: 14,
-              ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width - 40,
-              child: TextField(
-                obscureText: password,
-                decoration: InputDecoration(
-                  hintText: hinttext,
-                  suffixIcon: iconInput,
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(
         leading: FlatButton(
@@ -59,23 +34,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                child: Text(
-                  "Login",
-                  style: GoogleFonts.poppins(
-                    color: bluelightColor,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    shadows: <Shadow>[
-                      Shadow(
-                        offset: Offset(0, 3.0),
-                        blurRadius: 9,
-                        color: Color.fromARGB(30, 0, 0, 0),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              TitleAuth(title: "Login"),
               SizedBox(
                 height: 64,
               ),
@@ -83,6 +42,8 @@ class LoginPage extends StatelessWidget {
                 label: "E-mail adddress",
                 hinttext: "youremail@address.com",
                 iconInput: Icon(Icons.email),
+                password: false,
+                width: MediaQuery.of(context).size.width - 40,
               ),
               SizedBox(
                 height: 34,
@@ -92,6 +53,7 @@ class LoginPage extends StatelessWidget {
                 hinttext: "your password",
                 iconInput: Icon(Icons.lock),
                 password: true,
+                width: MediaQuery.of(context).size.width - 40,
               ),
               SizedBox(
                 height: 125,

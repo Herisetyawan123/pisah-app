@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:pisah_app/component/pages/auth/login_page.dart';
+import 'package:pisah_app/screens/auth/login_page.dart';
 
 import 'package:pisah_app/theme/theme.dart';
 
@@ -65,7 +65,7 @@ class GetStarted extends StatelessWidget {
           ),
           textGet(),
           SizedBox(
-            height: 120,
+            height: 100,
           ),
           Container(
             width: MediaQuery.of(context).size.width - 208,
