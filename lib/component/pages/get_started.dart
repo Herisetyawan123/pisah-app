@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:pisah_app/component/pages/auth/login_page.dart';
 
 import 'package:pisah_app/theme/theme.dart';
 
@@ -23,6 +23,10 @@ class GetStarted extends StatelessWidget {
       return CarouselSlider(
         options: CarouselOptions(
           height: 229,
+          autoPlay: true,
+          autoPlayInterval: Duration(seconds: 6),
+          autoPlayAnimationDuration: Duration(milliseconds: 1500),
+          pauseAutoPlayOnTouch: true,
         ),
         items: [1, 2, 3, 4].map((i) {
           return Builder(
@@ -96,12 +100,21 @@ class GetStarted extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
             ),
-            child: FlatButton(
-              onPressed: () {},
-              child: Text(
-                "Skip",
-                style: TextStyle(
-                  color: blueTextColor,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
+              },
+              child: Center(
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                    color: blueTextColor,
+                  ),
                 ),
               ),
             ),

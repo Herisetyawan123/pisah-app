@@ -28,6 +28,10 @@ TextStyle greyTextStyle = GoogleFonts.tajawal(
   fontWeight: FontWeight.w400,
 );
 
+TextStyle robotStyle = GoogleFonts.roboto(
+  fontSize: 14,
+);
+
 TextStyle titleTextStyle = GoogleFonts.robotoSlab(
   fontSize: 34,
   color: titleColor,
