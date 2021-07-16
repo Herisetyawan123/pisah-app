@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pisah_app/component/btn_gradient.dart';
 import 'package:pisah_app/component/input_text.dart';
 import 'package:pisah_app/component/title_auth.dart';
 import 'package:pisah_app/screens/auth/register_page.dart';
-import 'package:pisah_app/screens/beranda/index.dart';
-import 'package:pisah_app/screens/get_started.dart';
+
+import 'package:pisah_app/screens/beranda/profile.dart';
 import 'package:pisah_app/theme/theme.dart';
 
 import 'component/body.dart';
@@ -56,7 +55,7 @@ class LoginPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Dashboard(),
+                    builder: (context) => ProfilePage(),
                   ),
                 );
               },

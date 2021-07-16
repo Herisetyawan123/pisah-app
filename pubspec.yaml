@@ -50,6 +50,9 @@ flutter:
   assets:
       - assets/
       - assets/slider_get/
+      - assets/slider_trending/
+      - assets/logo/
+      - assets/profile/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
