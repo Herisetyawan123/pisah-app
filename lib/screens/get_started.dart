@@ -48,7 +48,7 @@ class GetStarted extends StatelessWidget {
     Widget textGet() {
       return Container(
         child: Text(
-          'Lorem, ipsum dolor sit amet consectetur adipisicing\n elit. Rem voluptas ipsum dolores, nemo nihil molestiae\n itaque esse consequuntur. Numquam, molestiae?',
+          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem voluptas ipsum dolores, nemo nihil molestiae itaque esse consequuntur. Numquam, molestiae?',
           style: greyTextStyle,
           textAlign: TextAlign.center,
         ),
@@ -81,7 +81,7 @@ class GetStarted extends StatelessWidget {
               // color: bluelightColor,
               borderRadius: BorderRadius.circular(50),
             ),
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {},
               child: Text(
                 "Get Started",
