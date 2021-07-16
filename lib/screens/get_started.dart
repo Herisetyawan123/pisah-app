@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:pisah_app/component/btn_gradient.dart';
 import 'package:pisah_app/screens/auth/login_page.dart';
 
 import 'package:pisah_app/theme/theme.dart';
@@ -67,54 +68,34 @@ class GetStarted extends StatelessWidget {
           SizedBox(
             height: 100,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width - 208,
-            height: 40,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    bluelightColor,
-                    blueColor,
-                  ]),
-              // color: bluelightColor,
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                "Get Started",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+          BtnGradient(
+            text: Text(
+              "Get Started",
+              style: TextStyle(
+                color: Colors.white,
               ),
             ),
+            width: MediaQuery.of(context).size.width - 208,
+            border: BorderRadius.circular(50),
+            proses: () {},
           ),
           SizedBox(
             height: 19,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width - 208,
-            height: 40,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginPage(),
-                  ),
-                );
-              },
-              child: Center(
-                child: Text(
-                  "Skip",
-                  style: TextStyle(
-                    color: blueTextColor,
-                  ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ),
+              );
+            },
+            child: Center(
+              child: Text(
+                "Skip",
+                style: TextStyle(
+                  color: blueTextColor,
                 ),
               ),
             ),
