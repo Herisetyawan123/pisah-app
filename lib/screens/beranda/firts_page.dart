@@ -1,8 +1,8 @@
 // import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:pisah_app/screens/beranda/component/dashboard.dart';
-import 'package:pisah_app/screens/beranda/notification.dart';
-import 'package:pisah_app/screens/beranda/profile.dart';
+import 'package:pisah_app/screens/beranda/page/dashboard.dart';
+import 'package:pisah_app/screens/beranda/page/notification.dart';
+import 'package:pisah_app/screens/beranda/page/profile.dart';
 import 'package:pisah_app/theme/theme.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -21,6 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
     NotificationPage(),
     NotificationPage(),
     ProfilePage(),
+    ProfilePage(),
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         onPressed: () {
           setState(() {
-            currentIndex = 5;
+            currentIndex = 4;
           });
         },
       ),
@@ -73,7 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
       onPressed: () {
         setState(() {
           currentIndex = index;
-          debugPrint("$currentIndex");
           // icon = Icons.person;
         });
       },

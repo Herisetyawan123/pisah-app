@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pisah_app/component/btn_gradient.dart';
 import 'package:pisah_app/screens/auth/login_page.dart';
+import 'package:pisah_app/screens/beranda/firts_page.dart';
 
 import 'package:pisah_app/theme/theme.dart';
 
@@ -77,7 +78,12 @@ class GetStarted extends StatelessWidget {
             ),
             width: MediaQuery.of(context).size.width - 208,
             border: BorderRadius.circular(50),
-            proses: () {},
+            proses: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              );
+            },
           ),
           SizedBox(
             height: 19,
@@ -87,7 +93,7 @@ class GetStarted extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => LoginPage(),
+                  builder: (context) => MyHomePage(),
                 ),
               );
             },
