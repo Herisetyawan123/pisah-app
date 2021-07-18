@@ -3,8 +3,8 @@ import 'package:pisah_app/component/btn_gradient.dart';
 import 'package:pisah_app/component/input_text.dart';
 import 'package:pisah_app/component/title_auth.dart';
 import 'package:pisah_app/screens/auth/register_page.dart';
-
-import 'package:pisah_app/screens/beranda/profile.dart';
+import 'package:pisah_app/screens/beranda/detail_news.dart';
+import 'package:pisah_app/screens/beranda/firts_page.dart';
 import 'package:pisah_app/theme/theme.dart';
 
 import 'component/body.dart';
@@ -52,10 +52,10 @@ class LoginPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width - 86,
               border: BorderRadius.circular(6),
               proses: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfilePage(),
+                    builder: (context) => DetailPage(),
                   ),
                 );
               },

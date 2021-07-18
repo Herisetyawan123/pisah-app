@@ -6,30 +6,16 @@ import '../../get_started.dart';
 class Body extends StatelessWidget {
   const Body({
     Key? key,
-    this.child,
+    required this.child,
   }) : super(key: key);
 
-  final Widget? child;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: FlatButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => GetStarted(),
-              ),
-            );
-          },
-          child: Icon(
-            Icons.arrow_back,
-            color: bluelightColor,
-          ),
-        ),
-        backgroundColor: Colors.white,
+        backgroundColor: blueColor,
         elevation: 0,
       ),
       body: SingleChildScrollView(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pisah_app/screens/beranda/firts_page.dart';
 
 import 'package:pisah_app/screens/get_started.dart';
+import 'package:pisah_app/theme/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Pisah Aplication',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: GetStarted(),
+      home: MyHomePage(),
     );
   }
 }
