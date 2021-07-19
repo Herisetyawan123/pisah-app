@@ -55,16 +55,17 @@ class ProfilePage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 50),
               width: MediaQuery.of(context).size.width - 100,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
                         Text(
                           "2 k",
                           style: robotStyle.copyWith(
                             color: greyColor,
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         SizedBox(
@@ -74,20 +75,28 @@ class ProfilePage extends StatelessWidget {
                           "Follower",
                           style: robotStyle.copyWith(
                             fontWeight: FontWeight.w500,
-                            fontSize: 20,
+                            fontSize: 14,
                           ),
                         ),
                       ],
                     ),
                   ),
                   Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        left: BorderSide(color: greyColor),
+                        right: BorderSide(color: greyColor),
+                      ),
+                    ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "10",
                           style: robotStyle.copyWith(
                             color: greyColor,
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         SizedBox(
@@ -96,20 +105,21 @@ class ProfilePage extends StatelessWidget {
                         Text(
                           "Following",
                           style: robotStyle.copyWith(
-                            fontSize: 20,
+                            fontSize: 14,
                           ),
                         ),
                       ],
                     ),
                   ),
                   Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
                         Text(
                           "10",
                           style: robotStyle.copyWith(
                             color: greyColor,
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         SizedBox(
@@ -119,7 +129,7 @@ class ProfilePage extends StatelessWidget {
                           "Posting",
                           style: robotStyle.copyWith(
                             fontWeight: FontWeight.w500,
-                            fontSize: 20,
+                            fontSize: 14,
                           ),
                         ),
                       ],

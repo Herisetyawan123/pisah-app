@@ -27,6 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: page[currentIndex],
       floatingActionButton: FloatingActionButton(
+        elevation: 0.2,
+        splashColor: bluelightColor,
         child: Icon(
           Icons.add_rounded,
           color: Colors.white,
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
+        elevation: 0.2,
         shape: CircularNotchedRectangle(),
         notchMargin: 10,
         child: Container(
@@ -82,18 +85,16 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Icon(
             icon,
-            color:
-                currentIndex == index ? Color(0xff757575) : Color(0xffA8A8A8),
+            color: currentIndex == index ? blueColor : Color(0xffA8A8A8),
           ),
           SizedBox(
             height: 3,
           ),
           Text(
-            text,
+            currentIndex == index ? text : "",
             style: robotStyle.copyWith(
-              color:
-                  currentIndex == index ? Color(0xff757575) : Color(0xffA8A8A8),
-              fontWeight: FontWeight.bold,
+              color: currentIndex == index ? blueColor : Color(0xffA8A8A8),
+              // fontWeight: FontWeight.bold,
             ),
           )
         ],
