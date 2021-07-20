@@ -67,9 +67,9 @@ class Dashboard extends StatelessWidget {
               ),
               Column(
                 children: [
-                  cardNews(context),
-                  cardNews(context),
-                  cardNews(context),
+                  CardNews(),
+                  CardNews(),
+                  CardNews(),
                 ],
               ),
             ],

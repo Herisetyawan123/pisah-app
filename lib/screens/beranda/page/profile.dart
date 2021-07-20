@@ -156,9 +156,9 @@ class ProfilePage extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  cardNews(context),
-                  cardNews(context),
-                  cardNews(context),
+                  CardNews(),
+                  CardNews(),
+                  CardNews(),
                 ],
               ),
             ),

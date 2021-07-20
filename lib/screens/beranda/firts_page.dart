@@ -1,8 +1,10 @@
 // import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:pisah_app/screens/beranda/page/add_news.dart';
 import 'package:pisah_app/screens/beranda/page/dashboard.dart';
 import 'package:pisah_app/screens/beranda/page/notification.dart';
 import 'package:pisah_app/screens/beranda/page/profile.dart';
+import 'package:pisah_app/screens/beranda/page/search_page.dart';
 import 'package:pisah_app/theme/theme.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,10 +20,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List page = <Widget>[
     Dashboard(),
-    NotificationPage(),
+    SearchPage(),
     NotificationPage(),
     ProfilePage(),
-    ProfilePage(),
+    AddPage(),
   ];
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   MateriaButtonContainer(
                       Icons.notifications, "Notification", 2),
-                  MateriaButtonContainer(Icons.person, "Search", 3),
+                  MateriaButtonContainer(Icons.person, "Profile", 3),
                 ],
               ),
             ],
@@ -91,9 +93,10 @@ class _MyHomePageState extends State<MyHomePage> {
             height: 3,
           ),
           Text(
-            currentIndex == index ? text : "",
+            text,
             style: robotStyle.copyWith(
               color: currentIndex == index ? blueColor : Color(0xffA8A8A8),
+              fontSize: 10,
               // fontWeight: FontWeight.bold,
             ),
           )
